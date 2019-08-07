@@ -28,6 +28,7 @@ start the server.
 git clone https://github.com/afnarqui/loginGithubGoogleCalendar.git
 cd loginGithubGoogleCalendar
 docker build . --tag logingithubgooglecalendar
+docker run -it -p 3000:3200 logingithubgooglecalendar
 ```
 
 [afn]: <https://github.com/afnarqui/loginGithubGoogleCalendar>
