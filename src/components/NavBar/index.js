@@ -1,14 +1,18 @@
 import React from 'react'
+import { Link, Nav } from './styles'
+import { MdHome, MdPersonOutline } from 'react-icons/md'
+
+const SIZE = '32px'
 
 export const NavBar = () => {
   return (
-    <nav>
-      <button>
-          home
-      </button>
-      <button>
-          user
-      </button>
-    </nav>
+    <Nav>
+      <Link to='/'>
+        <MdHome size={SIZE} />
+      </Link>
+      <Link to='/user'>
+        <MdPersonOutline size={SIZE} />
+      </Link>
+    </Nav>
   )
 }
