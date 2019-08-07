@@ -1,5 +1,5 @@
 FROM node:alpine
-COPY . /app
+COPY ./public /app
 WORKDIR /app
 
 RUN mkdir -p logs && \
