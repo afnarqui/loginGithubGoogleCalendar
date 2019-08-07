@@ -1,3 +1,37 @@
+# loginGithubGoogleCalendar
+
+project of lists what search in github and google calendar. developed in react.js with redux using docker
+
+[![N|Solid](https://res.cloudinary.com/drqk6qzo7/image/upload/v1565186527/github_nt9cv6.png)](https://nodesource.com/products/nsolid)
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+[trello](https://trello.com/b/b5bY98L0/logingithubgooglecalendar) Trello
+
+And of course netcore-webapi itself is open source with a [public repository][afn]
+ on GitHub.
+ 
+## Usage
+
+loginGithubGoogleCalendar requires 
+
+[Docker](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+[Git](https://git-scm.com/downloads)
+
+to run.
+
+Install the dependencies and devDependencies previous
+start the server.
+
+## download
+```sh
+git clone https://github.com/afnarqui/loginGithubGoogleCalendar.git
+cd loginGithubGoogleCalendar
+docker build . --tag logingithubgooglecalendar
+```
+
+[afn]: <https://github.com/afnarqui/loginGithubGoogleCalendar>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
