@@ -1,10 +1,15 @@
 import React from 'react'
-import {Login} from './components/Login'
-import { GlobalStyle } from './styles/GlobalStyles'
+import { Home } from './pages/Home'
+import { NavBar } from './components/NavBar'
+import { Router } from '@reach/router'
 
-export const App = () => (
-  <div>
-  <GlobalStyle />
-  <Login/>
-  </div>
-)
+export const App = () => {
+  return (
+    <div>
+      <Router>
+        <Home path='/' />
+      </Router>
+      <NavBar />
+    </div>
+  )
+}

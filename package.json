@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "webpack",
-        "dev": "webpack-dev-server",
+        "dev": "webpack-dev-server --history-api-fallback",
         "lint": "standard",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -35,6 +35,7 @@
         "webpack-dev-server": "^3.7.2"
     },
     "dependencies": {
+        "@reach/router": "^1.2.1",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-icons": "^3.7.0",
@@ -43,6 +44,11 @@
     "eslintConfig": {
         "extends": [
             "./node_modules/standard/slintrc.json"
+        ]
+    },
+    "standard": {
+        "ignore": [
+            "/dist/**"
         ]
     }
 }
