@@ -1,3 +1,9 @@
+ type User {
+  _id: ID!
+  account: String!
+  password: String!
+ }
   type Query {
-    hello: String
+    "return all users"
+    getUsers: [User]
   }

@@ -1,7 +1,15 @@
 'use strict'
 
+const users = [
+  {
+    _id: 'anyid',
+    account: 'afnarqui',
+    password: 'password'
+  }
+]
+
 module.exports = {
-  hello: () => {
-    return 'aja'
+  getUsers: () => {
+    return users
   }
 }
