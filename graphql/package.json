@@ -1,0 +1,15 @@
+{
+    "name": "apigraphql",
+    "version": "1.0.0",
+    "description": "api graphql",
+    "main": "index.js",
+    "author": "Andrés Naranjo <andresnaranjo@afnarqui.com",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "dependencies": {
+        "graphql": "^14.4.2"
+    }
+}
