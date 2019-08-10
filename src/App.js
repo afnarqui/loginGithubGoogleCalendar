@@ -8,7 +8,7 @@ import { NavBar } from './components/NavBar'
 import { Router } from '@reach/router'
 
 const UserLogged = ({ children }) => {
-  return children({ isAuth: false })
+  return children({ isAuth: true })
 }
 
 export const App = () => {
@@ -24,11 +24,11 @@ export const App = () => {
           ({ isAuth }) =>
             isAuth
               ? <Router>
-                <User path='/' />
+                <User path='/user' />
               </Router>
               : <Router>
                 <Register path='/user' />
-              </Router>
+               </Router>
         }
       </UserLogged>
       <NavBar />
