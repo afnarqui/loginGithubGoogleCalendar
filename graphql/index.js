@@ -5,22 +5,16 @@ const express = require('express')
 const gqlMiddleware = require('express-graphql')
 const { readFileSync } = require('fs')
 const { join } = require('path')
-
+const resolvers = require('./lib/resolvers')
 const app = express()
 const port = process.env.port || 3000
 
 const schema = buildSchema(
   readFileSync(
-  join(__dirname, 'lib', 'schema.graphql'),
-  'utf-8'
+    join(__dirname, 'lib', 'schema.graphql'),
+    'utf-8'
   )
-  )
-
-const resolvers = {
-  hello: () => {
-    return 'aja'
-  }
-}
+)
 
 app.use('/api', gqlMiddleware({
   schema: schema,
