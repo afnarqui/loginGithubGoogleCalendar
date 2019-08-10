@@ -18,30 +18,30 @@ module.exports = {
     }
     return input
   },
-   signup: async (root, { input }) => {
-      let db  
-      let user 
+  signup: async (root, { input }) => {
+    let db
+    let user
 
-      const {account, password} = input
-      try {
-        db = await connectDb()
-        user = await db.collection('users').findOne({
-          account:input.account
-        })
-      } catch(error) {
-        errorHandler(error)
-      }
-      if (user) {
-        throw new Error('User already exists')
-      }
+    const { account, password } = input
+    try {
+      db = await connectDb()
+      user = await db.collection('users').findOne({
+        account: input.account
+      })
+    } catch (error) {
+      errorHandler(error)
+    }
+    if (user) {
+      throw new Error('User already exists')
+    }
 
-      const newUser = await db.collection('users').insertOne(input)
+    const newUser = await db.collection('users').insertOne(input)
 
-      // return json web token
-      return jsonwebtoken.sign(
-        { id: newUser._id, account: newUser.account },
-        process.env.JWT_SECRET,
-        { expiresIn: '1y' }
-      )
-    }  
+    // return json web token
+    return jsonwebtoken.sign(
+      { id: newUser._id, account: newUser.account },
+      process.env.JWT_SECRET,
+      { expiresIn: '1y' }
+    )
+  }
 }

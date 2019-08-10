@@ -7,13 +7,13 @@ import Context from './Context'
 import { App } from './App'
 
 const client = new ApolloClient({
-    uri:'http://localhost:3000/api'
+  uri: 'http://localhost:3000/api'
 })
 
 ReactDOM.render(
-  <Context.Provider value={{isAuth: false}}>
+  <Context.Provider>
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
   </Context.Provider>
-, document.getElementById('app'))
+  , document.getElementById('app'))

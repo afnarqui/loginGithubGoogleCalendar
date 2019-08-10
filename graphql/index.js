@@ -10,12 +10,12 @@ const resolvers = require('./lib/resolvers')
 const app = express()
 const port = process.env.port || 3000
 
-const typeDefs =   readFileSync(
+const typeDefs = readFileSync(
   join(__dirname, 'lib', 'schema.graphql'),
   'utf-8'
 )
 
-const schema = makeExecutableSchema({typeDefs, resolvers})
+const schema = makeExecutableSchema({ typeDefs, resolvers })
 
 app.use(cors())
 

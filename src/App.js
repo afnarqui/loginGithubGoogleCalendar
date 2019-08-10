@@ -25,7 +25,7 @@ export const App = () => {
               </Router>
               : <Router>
                 <Register path='/user' />
-               </Router>
+              </Router>
         }
       </Context.Consumer>
       <NavBar />
