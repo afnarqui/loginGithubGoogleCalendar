@@ -1,3 +1,20 @@
+ type User {
+  _id: ID!
+  account: String!
+  password: String!
+ }
   type Query {
-    hello: String
+    "return all users"
+    getUsers: [User]
+    "return one course"
+    getUser(id: ID!): User    
   }
+  input UserInput {
+    account: String!
+    password: String!  
+  }
+
+  type Mutation {
+    "create one user"
+    createUser(input: UserInput!): User
+  }  
