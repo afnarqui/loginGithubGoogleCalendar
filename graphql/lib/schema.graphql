@@ -6,4 +6,6 @@
   type Query {
     "return all users"
     getUsers: [User]
+    "return one course"
+    getUser(id: ID!): User    
   }
