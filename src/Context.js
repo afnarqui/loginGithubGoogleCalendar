@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 const Context = createContext()
+const SECRET = 'afn'
 
 const Provider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false)

@@ -3,14 +3,14 @@
   account: String!
   password: String!
  }
+ 
   type Query {
     "return all users"
     getUsers: [User]
     "return one users"
     getUser(id: ID!): User  
-    "return one users where params contain the account"
-    getUserAccount(account: String!): User
   }
+
   input UserInput {
     account: String!
     password: String!  
@@ -23,7 +23,9 @@
 
   type Mutation {
     "create one user"
-    createUser(input: UserInput!): User
-    "signup user"
-    signup (input: UserCredentials!): String
-  }  
+    createUser(input: UserCredentials!): User
+    "signup"
+    signup (input: UserInput!): String  
+  }
+
+

@@ -8,10 +8,12 @@ module.exports = {
   createUser: async (root, { input }) => {
     let db
     let user
-
+    
     try {
       db = await connectDb()
-      user = await db.collection('users').insertOne(input)
+      user = await db.collection('users').insertOne({
+        input
+      })
       input._id = user.insertedId
     } catch (error) {
       errorHandler(error)
@@ -22,7 +24,6 @@ module.exports = {
     let db
     let user
 
-    const { account, password } = input
     try {
       db = await connectDb()
       user = await db.collection('users').findOne({
@@ -34,9 +35,8 @@ module.exports = {
     if (user) {
       throw new Error('User already exists')
     }
-
     const newUser = await db.collection('users').insertOne(input)
-
+    
     // return json web token
     return jsonwebtoken.sign(
       { id: newUser._id, account: newUser.account },
