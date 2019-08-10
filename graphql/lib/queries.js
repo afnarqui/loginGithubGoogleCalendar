@@ -26,6 +26,20 @@ module.exports = {
           errorHandler(error)
         }
         return user
+      },
+      getUserAccount: async (root, args) => {
+        let db 
+        let user 
+
+        try {
+          db = await connectDb()
+          user = db.collection('users').findOne(
+            { account: args.account}
+          )
+        } catch(error) {
+          errorHandler(error)
+        }
+        return user
       }
   }
   
