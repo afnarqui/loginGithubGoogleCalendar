@@ -9,3 +9,12 @@
     "return one course"
     getUser(id: ID!): User    
   }
+  input UserInput {
+    account: String!
+    password: String!  
+  }
+
+  type Mutation {
+    "create one user"
+    createUser(input: UserInput!): User
+  }  
