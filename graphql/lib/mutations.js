@@ -1,6 +1,7 @@
 'use strict'
 
 const connectDb = require('./db')
+const errorHandler = require('./errorHandler')
 
 module.exports = {
   createUser: async (root, { input }) => {
@@ -12,7 +13,7 @@ module.exports = {
       user = await db.collection('users').insertOne(input)
       input._id = user.insertedId
     } catch (error) {
-      console.error(error)
+      errorHandler(error)
     }
     return input
   }
