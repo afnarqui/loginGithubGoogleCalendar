@@ -1,7 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { App } from './App'
 
+const client = new ApolloClient({
+    uri:'http://localhost:3000/api'
+})
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <App />
+  </ApolloProvider>
+, document.getElementById('app'))
