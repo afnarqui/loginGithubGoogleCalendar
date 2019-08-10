@@ -6,10 +6,7 @@ import { GlobalStyles } from './styles/GlobalStyles'
 
 import { NavBar } from './components/NavBar'
 import { Router } from '@reach/router'
-
-const UserLogged = ({ children }) => {
-  return children({ isAuth: true })
-}
+import Context from './Context'
 
 export const App = () => {
   return (
@@ -19,7 +16,7 @@ export const App = () => {
         <Home path='/' />
       </Router>
 
-      <UserLogged>
+      <Context.Consumer>
         {
           ({ isAuth }) =>
             isAuth
@@ -28,9 +25,9 @@ export const App = () => {
               </Router>
               : <Router>
                 <Register path='/user' />
-               </Router>
+              </Router>
         }
-      </UserLogged>
+      </Context.Consumer>
       <NavBar />
     </div>
   )

@@ -3,18 +3,29 @@
   account: String!
   password: String!
  }
+ 
   type Query {
     "return all users"
     getUsers: [User]
-    "return one course"
-    getUser(id: ID!): User    
+    "return one users"
+    getUser(id: ID!): User  
   }
+
   input UserInput {
     account: String!
     password: String!  
   }
 
+  input UserCredentials {
+    account: String!
+    password: String!
+  }
+
   type Mutation {
     "create one user"
-    createUser(input: UserInput!): User
-  }  
+    createUser(input: UserCredentials!): User
+    "signup"
+    signup (input: UserInput!): String  
+  }
+
+
