@@ -1,6 +1,10 @@
 'use strict'
 
-const { graphql, buildSchema } = require('graphql')
+const { buildSchema } = require('graphql')
+const express = require('express')
+const gqlMiddleware = require('express-graphql')
+const app = express()
+const port = process.env.port || 3000
 
 const schema = buildSchema(`
   type Query {
@@ -8,9 +12,18 @@ const schema = buildSchema(`
   }
 `)
 
-graphql(schema, '{ hello }')
-  .then(( data ) => {
-    console.log(data)
-  })
+const resolvers = {
+  hello: () => {
+    return 'aja'
+  }
+}
 
+app.use('/api', gqlMiddleware({
+  schema: schema,
+  rootValue: resolvers,
+  graphiql: true
+}))
 
+app.listen(port, () => {
+  console.log('server is listening at http://localhost:3000')
+})
