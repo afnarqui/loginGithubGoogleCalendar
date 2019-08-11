@@ -7,7 +7,7 @@ import Context from './Context'
 import { App } from './App'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3000/api',
+  uri: 'https://loginggc-back.afnarqui.now.sh/api',
   request: operation => {
     const token = window.sessionStorage.getItem('token')
     const authorization = token ? `Bearer ${token}` : ''
