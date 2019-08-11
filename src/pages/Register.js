@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Context from '../Context'
 import { UserForm } from '../components/UserForm'
 import { RegisterMutation } from '../container/RegisterMutation'
+import { LoginMutation } from '../container/LoginMutation'
 
 export const Register = () => (
   <Context.Consumer>
@@ -14,16 +15,35 @@ export const Register = () => (
                 const onSubmit = ({ account, password }) => {
                   const input = { account, password }
                   const variables = { input } 
-                  register({ variables }).then(activateAuth)
+                  register({ variables }).then((data)=>{
+                    const { signup } = data.data
+                    activateAuth(signup)
+                  })
                 }
 
-                const errorMessage = error && 'Error in the proccess'
-                return <UserForm error={errorMessage} title='Register' onSubmit={onSubmit} />
+                const errorMessage = error && 'Error in the proccess register'
+                return <UserForm disabled={loading} error={errorMessage} title='Register' onSubmit={onSubmit} />
               }
             }
           </RegisterMutation>
+          <LoginMutation>
+            {
+              (login, {  data, loading, error }) => {
+                const onSubmit = ({ account, password }) => {
+                  const input = { account, password }
+                  const variables = { input } 
+                  login({ variables }).then((data)=>{
+                    const { login } = data.data
+                    activateAuth(login)
+                  })
+                }
 
-          {/* <UserForm title='Login' onSubmit={activateAuth} />  */}
+                const errorMessage = error && 'Error in the proccess login'
+                return  <UserForm disabled={loading} error={errorMessage}  title='Login' onSubmit={onSubmit} />
+              }
+            }
+          </LoginMutation>
+       
         </Fragment>
       }
     }

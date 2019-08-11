@@ -25,7 +25,9 @@
     "create one user"
     createUser(input: UserCredentials!): User
     "signup"
-    signup (input: UserInput!): String  
+    signup (input: UserInput!): String
+    "login"
+    login(input: UserInput!): String
   }
 
 
