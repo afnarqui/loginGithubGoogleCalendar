@@ -30,6 +30,11 @@ cd loginGithubGoogleCalendar
 docker build . --tag logingithubgooglecalendar
 docker run -it -p 3000:3200 logingithubgooglecalendar
 ```
+## exec 
+```sh
+https://loginggc-back.afnarqui.now.sh/api
+https://loginggc-web.afnarqui.now.sh
+```
 
 [afn]: <https://github.com/afnarqui/loginGithubGoogleCalendar>
 

@@ -1,0 +1,43 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.8e15f19c741348bbff3b466f75d3d32f.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.12dda13d1d903617beb98b37354fa18b.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_256x256.809b76a5e51813ddb56eb5391b87a4de.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.0f49f4f20fe8d680c3775f81a1f1a75e.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.b5cab3c489bf8860480f385a88f115ea.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.d7a722011006c25e6830f032b5156513.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "login-github-google-calendar",
+  "short_name": "login-github-google-calendar",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "shortname": "LoginGGC",
+  "description": "search with calendar and github",
+  "background_color": "#fff",
+  "theme_color": "#b1a"
+}
