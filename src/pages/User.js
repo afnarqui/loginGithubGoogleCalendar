@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Fragment, useContext } from 'react'
+import { Context } from '../Context'
+import { Button } from '../components/Button'
 
 export const User = () => {
-  return (
-    <div>
-      <h1>User</h1>
-    </div>
-  )
+  const { removeAuth } = useContext(Context)
+  
+  return <Fragment>
+    <h1>user</h1>
+    <Button onClick={removeAuth}>Cerra sesión</Button>
+  </Fragment>
 }
