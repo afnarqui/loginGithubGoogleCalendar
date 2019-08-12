@@ -2,7 +2,7 @@
 
 project of lists what search in github and google calendar. developed in react.js with redux using docker
 
-[![N|Solid](https://res.cloudinary.com/drqk6qzo7/image/upload/v1565186527/github_nt9cv6.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://res.cloudinary.com/drqk6qzo7/image/upload/v1565583365/githubend_yerwto.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 

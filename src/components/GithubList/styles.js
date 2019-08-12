@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Bgithub = styled.span`
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
+    background:#555;
     color: #AAA;
     float: left;
     text-align: center;
@@ -12,7 +12,7 @@ export const Bgithub = styled.span`
     transition: 0.3s;
     border-radius: 0;
     &:hover {
-    background: #555;
+    background:  #d9d9d9;
   }
 `
 
