@@ -5,9 +5,10 @@ import { ApolloProvider } from 'react-apollo'
 import Context from './Context'
 
 import { App } from './App'
-
+// uri: 'http://localhost:3000/api',
+// uri: 'https://loginggc-back.afnarqui.now.sh/api',
 const client = new ApolloClient({
-  uri: 'https://loginggc-back.afnarqui.now.sh/api',
+  uri: 'http://localhost:3000/api',
   request: operation => {
     const token = window.sessionStorage.getItem('token')
     const authorization = token ? `Bearer ${token}` : ''

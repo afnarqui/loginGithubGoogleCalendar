@@ -1,10 +1,8 @@
 import React from 'react'
-import { Login } from '../components/Login'
 
-export const Home = () => {
+export const Home = (props) => {
   return (
     <div>
-      <Login />
     </div>
   )
 }

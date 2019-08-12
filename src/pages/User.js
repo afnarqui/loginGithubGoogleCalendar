@@ -6,7 +6,7 @@ export const User = () => {
   const { removeAuth } = useContext(Context)
   
   return <Fragment>
-    <h1>user</h1>
-    <Button onClick={removeAuth}>Cerra sesión</Button>
+    <h1>Google Calendar</h1>
+    <Button onClick={removeAuth}>Log out</Button>
   </Fragment>
 }
