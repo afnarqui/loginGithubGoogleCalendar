@@ -2,8 +2,8 @@ import React from 'react'
 import { Home } from './pages/Home'
 import { Login } from './components/Login'
 import { Github } from './components/Github'
-
 import { User } from './pages/User'
+import Calendar  from './components/Calendar'
 import { Register } from './pages/Register'
 import { GlobalStyles } from './styles/GlobalStyles'
 
@@ -24,10 +24,10 @@ export const App = () => {
           ({ isAuth }) =>
             isAuth
               ? <Router>
-                <User path='/user' />
+                <Calendar path='/calendar' />
                 <Login path='/login' />
                 <Github path='/Github' />
-                
+                <User path='/out' />
               </Router>
               : <Router>
                  <Register path='/' /> 

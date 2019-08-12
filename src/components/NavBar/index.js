@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Nav } from './styles'
 import { MdHome, MdEvent } from 'react-icons/md'
-import { IoLogoOctocat } from "react-icons/io";
+import { IoLogoOctocat, IoMdLogOut } from "react-icons/io";
 const SIZE = '32px'
 
 export const NavBar = () => {
@@ -13,8 +13,11 @@ export const NavBar = () => {
       <Link to='/Github'>
         <IoLogoOctocat size={SIZE} />
       </Link>    
-      <Link to='/user'>
+      <Link to='/calendar'>
         <MdEvent size={SIZE} />
+      </Link>
+      <Link to='/out'>
+        <IoMdLogOut size={SIZE} />
       </Link>
     </Nav>
   )
