@@ -1,5 +1,8 @@
 import React from 'react'
 import { Home } from './pages/Home'
+import { Login } from './components/Login'
+import { Github } from './components/Github'
+
 import { User } from './pages/User'
 import { Register } from './pages/Register'
 import { GlobalStyles } from './styles/GlobalStyles'
@@ -22,12 +25,16 @@ export const App = () => {
             isAuth
               ? <Router>
                 <User path='/user' />
+                <Login path='/login' />
+                <Github path='/Github' />
+                
               </Router>
               : <Router>
-                <Register path='/user' />
+                 <Register path='/' /> 
               </Router>
         }
       </Context.Consumer>
+     
       <NavBar />
     </div>
   )
